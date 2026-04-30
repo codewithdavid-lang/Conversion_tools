@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conversion Tools Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                JavaScript Tools 🔧
+            </h1>
+        </header>
+        <div class="tabs">
+            <button class="tab active" data-tab="calculator-panel">🧮 Calculator</button>
+            <button class="tab" data-tab="temperature-panel">🌡️ Temperature</button>
+            <button class="tab" data-tab="currency-panel">💰 Currency</button>
+        </div>
+        <main>
+            <section class="panel active" id="calculator-panel">
+                <h2>Calculator</h2>
+                <div id="calculator">
+                    <input id="display" readonly value="0">
+                    <div id="keys">
+                        <button class="operator-btn">+</button>
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button class="operator-btn">-</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button class="operator-btn">*</button>
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button class="operator-btn">/</button>
+                        <button>0</button>
+                        <button>.</button>
+                        <button>=</button>
+                        <button class="operator-btn">⌫</button>
+                        <button class="operator-btn">C</button>  
+                    </div>
+                </div>
+            </section>
+            <section class="panel" id="temperature-panel">
+                 <h2 class="heading">🌡️ Temperature Convertor</h2>
+                 <p id="tempVisual"></p>
+    
+            <div class="temp-container">
+                <div class="temp-field">
+                    <label>Celsius:</label>
+                    <input type="number" id="celsius" placeholder="Enter Temperature">
+                </div>
+                
+                <div class="temp-field">
+                    <label>Fahrenheit:</label>
+                    <input type="number" id="fahrenheit" placeholder="Enter Temperature">
+                </div>
+                
+                <div class="temp-field">
+                    <label>Kelvin:</label>
+                    <input type="number" id="kelvin" placeholder="Enter Temperature">
+                </div>
+            </div>
+            
+            <div id="tempResult" class="result-box">
+                Enter a value in any field
+            </div>
+            </section>
+           <section class="panel" id="currency-panel">
+    <h2>💰 Currency Converter</h2>
+
+    <input type="number" id="amount" value="1">
+
+    <div class="currency-icons" id="fromFlag">
+        <img src="https://flagcdn.com/w40/us.png" data-currency="USD">
+        <img src="https://flagcdn.com/w40/eu.png" data-currency="EUR">
+        <img src="https://flagcdn.com/w40/gb.png" data-currency="GBP">
+        <img src="https://flagcdn.com/w40/ng.png" data-currency="NGN">
+    </div>
+
+    <div id="swapBtn">⇅</div>
+
+    <div class="to-container">
+    <img id="toFlag" src="https://flagcdn.com/w40/eu.png">
+
+    <select id="toCurrency">
+        <option value="EUR">EUR - Euro</option>
+        <option value="USD">USD - US Dollar</option>
+        <option value="GBP">GBP - Pound</option>
+        <option value="NGN">NGN - Naira</option>
+    </select>
+</div>
+
+    <input id="currencyResult" readonly placeholder="Result">
+
+    <button id="convertBtn">Convert</button>
+</section>
+        </main>
+        <footer>
+            <p>David Adesokan | 3183816 | BSc. Year 1</p>
+        </footer>
+    </div>    
+                <script src="script.js"></script>                
+</body>
+</html>
